@@ -1,0 +1,16 @@
+// Breakpoints
+$set-breakpoint:( xsmall:0px, small:576px, medium:768px, large:992px, xlarge:1200px, xxlarge:1920px);
+// $set-breakpoint:( xsmall:578px, small:768px, medium:992px, large:1200px, xlarge:1920px, xxlarge:2560px);
+// 
+//  Colors
+// 
+// ## Primary
+$red: hsl(0, 78%, 62%);
+$cyan: hsl(180, 62%, 55%);
+$orange: hsl(34, 97%, 64%);
+$blue: hsl(212, 86%, 64%);
+$violet: hsl(248, 32%, 49%);
+// ## Neutral
+$darkBlue: hsl(234, 12%, 34%);
+$gray: hsl(229, 6%, 66%);
+$lightGray: hsl(0, 0%, 98%);

@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $lightGray;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    padding: 90px 30px 60px;
+    max-width: 375px;
+    text-align: center;
+    h1 {
+        color: $darkBlue;
+        font-size: 24px;
+        font-weight: 200;
+        line-height: 1.5;
+        margin-bottom: 24px;
+        & span {
+            font-weight: 600;
+        }
+    }
+    p {
+        font-size: 15px;
+        color: hsl(229, 6%, 66%);
+        margin: 0px;
+    }
+    @include set-mq(small) {
+        & {
+            max-width: 600px;
+            padding: 90px 30px 50px;
+        }
+    }
+    @include set-mq(medium) {
+        max-width: 500px;
+        & {
+            padding: 90px 0 50px;
+        }
+    }
+}
+
+.container-fluid {
+    max-width: 1170px;
+    .box {
+        background-color: $lightGray;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        padding: 35px 30px 0;
+        position: relative;
+        overflow: hidden;
+        margin: 12.5px;
+        max-width: 310px;
+        min-height: 225px;
+        // border-top: red solid 4px;
+        & h4 {
+            color: $darkBlue;
+            font-size: 19.5px;
+            margin: 0;
+            font-weight: 600;
+        }
+        & p {
+            font-size: 13px;
+            margin: 15px 0;
+            color: $gray;
+            font-weight: 400;
+        }
+        & img {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            height: 60px;
+            width: 60px;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 4px;
+            width: 100%;
+        }
+        &-red::after {
+            background-color: hsl(0, 78%, 62%);
+        }
+        &-cyan::after {
+            background-color: hsl(180, 62%, 55%);
+        }
+        &-orange::after {
+            background-color: hsl(34, 97%, 64%);
+        }
+        &-blue {
+            order: 4;
+        }
+        &-blue::after {
+            background-color: hsl(212, 86%, 64%);
+        }
+        &-push {
+            transform: translateY(0%);
+            @include set-mq(1170px) {
+                transform: translateY(50%);
+            }
+        }
+    }
+    @include set-mq(small) {
+        & {
+            align-content: flex-start;
+            padding-bottom: 35px;
+            .box {
+                padding: 35px 55px 0 30px;
+                margin: 15px;
+                max-width: 350px;
+                height: 250px;
+                & p {
+                    letter-spacing: .5;
+                }
+                & img {
+                    height: 65px;
+                    width: 65px;
+                }
+            }
+        }
+    }
+    @include set-mq(medium) {
+        & {
+            .box {
+                &-blue {
+                    order: unset;
+                }
+            }
+        }
+    }
+    @media screen and (min-height: 990px) and (min-width:790px) {
+        & {
+            height: calc( 100vh - 280px - 80px);
+        }
+    }
+}
+
+footer {
+    padding: 32px 0;
+    .attribution {
+        font-size: 11px;
+        margin: 0px;
+        & a {
+            color: $violet;
+            font-weight: 600;
+        }
+        & a:hover,
+        & a:focus {
+            text-decoration: underline;
+            color: $violet;
+            outline: none;
+        }
+    }
+}
